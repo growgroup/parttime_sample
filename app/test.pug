@@ -1,0 +1,89 @@
+//- filename :test.jabe
+//- description: サイトのテストページ
+
+extends /inc/foundation/_base.pug
+block append config
+  - current.id = "top"
+  - current.title = "テスト"
+  - current.description = "テストページの説明文"
+  - current.bodyClass = "top"
+  - current.depth = 1
+
+block body
+  .l-container
+    .l-wrapper
+      main.l-main.is-twocolumns
+        .l-post-content.is-twocollumns
+          h2 見出しレベル2
+          +c.anchor-nav
+            .row
+              .large-3.small-6
+                a(href="#").c-button.is-sm ページ内リンク
+              .large-3.small-6
+                a(href="#").c-button.is-sm ページ内リンク
+              .large-3.small-6
+                a(href="#").c-button.is-sm ページ内リンク
+              .large-3.small-6
+                a(href="#").c-button.is-sm ページ内リンク
+          .u-mbs.is-top.is-lg
+            p 基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。基本文章テキストです。
+          .u-mbs.is-top.is-lg
+            h3 見出しレベル3
+            +c.blcok
+              +e.block
+                .row
+                  .large-5.small-12
+                    +c.block__image
+                      img(src="assets/images/img-block-01.jpg", alt="")
+                  .large-7.small-12
+                    +c.block__content
+                      h4 見出しレベル4
+                      p ブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキスト
+            +c.block
+              h4 見出しレベル4
+              .row
+                .large-7.small-12
+                  +c.block__content
+                    p ブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキスト
+                .large-5.small-12
+                  +c.block__image
+                    img(src="assets/images/img-block-01.jpg", alt="")
+          .u-mbs.is-top.is-lg
+            +c.box
+              +e.block
+                +c.box__content
+                  h5
+                    i.fa.fa-circle-o 見出しレベル5
+                  p ブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキストブロックテキスト
+          .u-mbs.is-top.is-lg
+            table.c-table
+              tbody
+                tr
+                  th thテキスト
+                  td tdテキストtdテキスト
+                tr
+                  th thテキスト
+                  td tdテキストtdテキスト
+                tr
+                  th thテキスト
+                  td tdテキストtdテキスト
+          .u-mbs.is-top.is-lg
+            img(src="assets/images/img-sample-lg.jpg", alt="")
+          .u-mbs.is-top.is-lg
+            .row
+              .large-6.small-12
+                img(src="assets/images/img-sample-lg.jpg", alt="")
+              .large-6.small-12
+                img(src="assets/images/img-sample-lg.jpg", alt="")
+          .u-mbs.is-top.is-lg
+            .row
+              .large-4.small-12
+                img(src="assets/images/img-sample-lg.jpg", alt="")
+              .large-4.small-12
+                img(src="assets/images/img-sample-lg.jpg", alt="")
+              .large-4.small-12
+                img(src="assets/images/img-sample-lg.jpg", alt="")
+
+            
+                
+
